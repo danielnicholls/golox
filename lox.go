@@ -13,3 +13,11 @@ func main() {
 		RunPrompt()
 	}
 }
+
+func RunFile(path string) {
+	b, e := os.ReadFile(path)
+	if e != nil {
+		panic(e)
+	}
+	Run(b)
+}
